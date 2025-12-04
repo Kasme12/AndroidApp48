@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always" />
+    
+    <!-- Debug menu (overflow) -->
+    <item
+        android:id="@+id/action_load_test_data"
+        android:title="Load Test Data"
+        app:showAsAction="never" />
+    
+    <item
+        android:id="@+id/action_clear_data"
+        android:title="Clear All Data"
+        app:showAsAction="never" />
+    
+    <item
+        android:id="@+id/action_show_stats"
+        android:title="Show Statistics"
+        app:showAsAction="never" />
+</menu>
