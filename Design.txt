@@ -1,0 +1,15 @@
+📂 File Structure
+
+PhotosAppAndroid/app/src/main
+│
+├── java/com/example/photosapp/
+│ ├── MainActivity.java # Main album screen
+│ ├── AlbumActivity.java # Displays photos in an album
+│ ├── PhotoViewActivity.java # Fullscreen photo viewer
+│ ├── SearchActivity.java # Search screen by tag
+│
+├── res/layout/
+│ ├── activity_main.xml
+│ ├── activity_album.xml
+│ ├── activity_photo_view.xml
+│ ├── activity_search.xml
