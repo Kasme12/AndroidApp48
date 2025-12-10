@@ -60,3 +60,8 @@ This Android application is a simplified **photo album manager**, allowing users
 - **Albums**: Stored in `SharedPreferences` under `"albums"` using a `Set<String>` for names.
 - **Photos**: Stored under `"photos"` where each album key maps to a `Set<String>` of photo URIs.
 - **Tags**: Stored under `"tags"` where each photo URI maps to a `Set<String>` of tags.
+
+
+We used AI to help check our code and make sure we were on the right track. We used our Photos project, which was in JavaFXML. We used the Gemini chat
+in the Android Studio page to transfer our code/data from JavaFXML to XML. After refining our code and ensuring it was perfect, we used that same
+Gemini chat once more to triple check it and make sure it followed all of the requirements. 
