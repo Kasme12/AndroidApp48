@@ -1,7 +1,7 @@
 # Photos App - Android 
 
 ## 👥 Authors
-**Esmeralda Bencosme** and **Armaan Saleem**
+**Esmeralda Bencosme(eb1024)** and **Armaan Saleem(as3932)**
 
 ## 📱 Overview
 
