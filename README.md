@@ -8,7 +8,7 @@ Armaan Saleem As3932
 
 This document outlines how Google Gemini, a large language model, was used to assist in the development of this Android application.
 
-# Video show all the funcionalitis
+# Video show all the Functionalities
 
 https://youtu.be/w7l3R4VXs-c
 
@@ -46,6 +46,9 @@ The development process involved a sequence of prompts to build the app feature 
 - **Prompts:** Implicitly required or in response to crashes.
 - **AI Contribution:** Implemented data serialization to save album and photo data to the device's internal storage. Fixed numerous bugs, including `ClassCastException` from data corruption, `Uri` serialization issues when passing data between activities, and UI layout problems.
 
+- Use of Artifical Intelligence: AI was used to help by transferring the JavaFXML files from FXML to XML, and to help me and Esmeralda better understand the layout of Android Studio. It was helpful in guidance of the application, and fine tuning our models for our code. 
+
 ---
 
 *This README file was generated with the assistance of the GenAI to document its own involvement in the project.*
+
