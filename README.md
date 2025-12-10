@@ -1,67 +1,40 @@
-# Photos App - Android 
+# Photo Album App - GenAI Usage
 
-## 👥 Authors
-**Esmeralda Bencosme(eb1024)** and **Armaan Saleem(as3932)**
+This document outlines how Google Gemini, a large language model, was used to assist in the development of this Android application.
 
-## 📱 Overview
+## Prompts and Features Developed
 
-This Android application is a simplified **photo album manager**, allowing users to:
+The development process involved a sequence of prompts to build the app feature by feature. The following is a summary of the prompts and the corresponding functionalities generated or assisted by the AI.
 
-- Create, rename, and delete albums
-- Add, view, move, and delete photos in albums
-- Tag photos with keywords (e.g., `person:John`, `location:NYC`)
-- Search photos by tags
-- Navigate photos within an album
+### 1. Home Screen and Album Management
+- **Prompt:** "Set up the home screen to display a list of albums."
+- **AI Contribution:** Generated the `activity_main.xml` layout with a `RecyclerView` and `FloatingActionButton`. Created the `MainActivity.java` code to populate the list and the `AlbumAdapter` to bind the data.
+- **Prompt:** "Add functionality to create, open, delete, and rename albums."
+- **AI Contribution:** Implemented the dialog for creating new albums. Added a three-dot menu to each album item in the `AlbumAdapter` and the corresponding handler logic in `MainActivity` for renaming and deleting albums.
 
----
+### 2. Album and Photo Viewing
+- **Prompt:** "Once an album is open, you should be able to add, remove, or display a photo."
+- **AI Contribution:** Created the `AlbumActivity` to display photos within an album. It generated the layout with a `RecyclerView` for photos and a `FloatingActionButton` to add new photos from the device gallery. Implemented the `Photo` model class and `PhotoAdapter`.
+- **Prompt:** "The photo display screen should include an option for a slideshow."
+- **AI Contribution:** Created the `PhotoActivity` to display a single photo. Implemented the slideshow functionality with "Previous" and "Next" buttons to cycle through photos in an album.
 
-## 🛠️ Core Functionality
+### 3. Photo Tagging
+- **Prompt:** "When a photo is displayed, you should be able to add and delete tags (Person/Location)."
+- **AI Contribution:** Added an "Add Tag" button to `PhotoActivity`. Created a dialog for adding tags with a `Spinner` for the tag type and an `EditText` for the value. Implemented the `Tag` model and `TagAdapter`. Added a three-dot menu next to each tag to allow for deletion.
 
-### 1. **Main Screen (Album List)**
-- Displays a list of user-created albums.
-- Long-press functionality replaced with single tap:
-  - **First Tap**: Select album for rename/delete
-  - **Second Tap**: Opens album
+### 4. Move Photos
+- **Prompt:** "You should be able to move a photo from one album to another, with an option to create a new album in the process."
+- **AI Contribution:** Implemented a long-press context menu on photos in `AlbumActivity`. Added a dialog that lists existing albums and an option to create a new one. Wrote the logic to move the photo file between album data files.
 
-#### Actions:
-- `Create Album`: Opens dialog to name and save a new album.
-- `Rename Album`: Renames selected album and updates data.
-- `Delete Album`: Removes selected album and associated photos.
-- `Search`: Opens a tag-based photo search screen.
+### 5. Photo Search
+- **Prompt:** "You should be able to search for photos by tag-value pairs (single, AND, OR) with auto-completion."
+- **AI Contribution:** Added a search icon to the main screen's toolbar. Created a `SearchActivity` with UI for constructing search queries. Implemented logic to scan all photos and provide auto-complete suggestions for tag values. Wrote the search algorithm to handle single-tag, conjunctive (AND), and disjunctive (OR) searches.
+- **Prompt:** "There should be functionality to create an album containing the search results."
+- **AI Contribution:** Created a `SearchResultsActivity` to display search results. Added a button to create a new album from the results and implemented the corresponding file-saving logic.
 
----
-
-### 2. **Album View**
-- Displays thumbnails of all photos in the selected album.
-- Each photo supports:
-  - `Move`: Reassigns photo to a different album.
-  - `Delete`: Removes the photo from the album.
-- Clicking on a photo opens it in **fullscreen** with navigation and tag options.
+### 6. Data Persistence and Bug Fixes
+- **Prompts:** Implicitly required or in response to crashes.
+- **AI Contribution:** Implemented data serialization to save album and photo data to the device's internal storage. Fixed numerous bugs, including `ClassCastException` from data corruption, `Uri` serialization issues when passing data between activities, and UI layout problems.
 
 ---
-
-### 3. **Photo View**
-- Shows the selected photo in fullscreen.
-- Includes buttons to:
-  - Navigate `Previous` / `Next`
-  - Add or delete tags (`person:` or `location:` prefix required)
-  - View all tags associated with the photo
-
----
-
-### 4. **Search**
-- Users can search photos using tags (e.g., `person:John`, `location:Paris`).
-- Displays results in a scrollable grid view.
-
----
-
-## 💾 Data Persistence
-
-- **Albums**: Stored in `SharedPreferences` under `"albums"` using a `Set<String>` for names.
-- **Photos**: Stored under `"photos"` where each album key maps to a `Set<String>` of photo URIs.
-- **Tags**: Stored under `"tags"` where each photo URI maps to a `Set<String>` of tags.
-
-
-We used AI to help check our code and make sure we were on the right track. We used our Photos project, which was in JavaFXML. We used the Gemini chat
-in the Android Studio page to transfer our code/data from JavaFXML to XML. After refining our code and ensuring it was perfect, we used that same
-Gemini chat once more to triple check it and make sure it followed all of the requirements. 
+*This README file was generated with the assistance of the GenAI to document its own involvement in the project.*
