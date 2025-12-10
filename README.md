@@ -1,6 +1,16 @@
+# Author
+
+Esmeralda Bencosme eb1024
+
+Armaan Saleem As3932
+
 # Photo Album App - GenAI Usage
 
 This document outlines how Google Gemini, a large language model, was used to assist in the development of this Android application.
+
+# Video show all the funcionalitis
+
+https://youtu.be/w7l3R4VXs-c
 
 ## Prompts and Features Developed
 
@@ -37,4 +47,5 @@ The development process involved a sequence of prompts to build the app feature 
 - **AI Contribution:** Implemented data serialization to save album and photo data to the device's internal storage. Fixed numerous bugs, including `ClassCastException` from data corruption, `Uri` serialization issues when passing data between activities, and UI layout problems.
 
 ---
+
 *This README file was generated with the assistance of the GenAI to document its own involvement in the project.*
