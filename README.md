@@ -1,6 +1,6 @@
 # Author
 
-Esmeralda Bencosme eb1024
+Esmeralda Bencosme eb1024 
 
 Armaan Saleem As3932
 
@@ -50,5 +50,6 @@ The development process involved a sequence of prompts to build the app feature 
 
 ---
 
-*This README file was generated with the assistance of the GenAI to document its own involvement in the project.*
+*This README file was generated with the assistance of the GenAI to document its own involvement in the project.* (This README is not graded)
+
 
